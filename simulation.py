@@ -7,8 +7,9 @@ banner = {key:[0,0,0,0] for key in Name}
 
 # init params
 T = 0.05
-SCALE = True
+SCALE = False
 command = 0
+TOP = 3
 
 while command != 'esc':
 
@@ -22,7 +23,7 @@ while command != 'esc':
         SCALE = False
 
     # Что показываем
-    for i, key in enumerate(get_best_banner(banner, top=4, t=T, scale=SCALE)):
+    for i, key in enumerate(get_best_banner(banner, top=TOP, t=T, scale=SCALE)):
         banner[key][0] += 1
         print(i, key)
 
